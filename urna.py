@@ -29,14 +29,6 @@ def carregar_candidatos():
         print("Erro ao carregar o arquivo!")               
         return {}
     
-print("1 - Ler arquivo de candidatos")
-print("2 - Ler arquivo de eleitores")
-print("3 - Iniciar votação")
-print("4 - Apurar votos")
-print("5 - Mostrar resultados")
-print("6 - Fechar programa")
-escolha = int(input("Escolha umas das opções: "))
-
 def carregar_eleitores():
     dic_eleitores = {}
     try:
@@ -71,6 +63,15 @@ def carregar_eleitores():
     except Exception as e:
         print(f"Erro ao carregar eleitores: {e}")
         return {}
+        
+print("1 - Ler arquivo de candidatos")
+print("2 - Ler arquivo de eleitores")
+print("3 - Iniciar votação")
+print("4 - Apurar votos")
+print("5 - Mostrar resultados")
+print("6 - Fechar programa")
+escolha = int(input("Escolha umas das opções: "))
+
 
 if escolha == 1:
     candidatos = carregar_candidatos()
